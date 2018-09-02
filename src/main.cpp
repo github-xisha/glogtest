@@ -8,7 +8,10 @@
 #include <glog/logging.h>
 #include <iostream>
 
-int main()
+int main(int argc,char* argv[])
 {
+    google::InitGoogleLogging(argv[0]);
+    google::SetLogDestination(google::GLOG_INFO,"./myinfo");
     LOG(INFO)<<"hello,world";
+    return 0;
 }
